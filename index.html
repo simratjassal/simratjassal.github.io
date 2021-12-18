@@ -184,7 +184,7 @@
                         <input type="text" id="userName" placeholder="Name" class="contact__input" name="user_name">
                         <input type="mail" id="userEmail" placeholder="Email" class="contact__input" name="user_email">
                         <textarea name="message" id="msg" cols="0" rows="10" class="contact__input"></textarea>
-                        <input id="submitButton" value="Send" name="submit" type="submit"  class="contact__button button" >
+                        <button id="submitButton" onclick="navigatorr()" value="Send" name="submit" type="submit"  class="contact__button button" >Send</button>
                     </form>
                 </div>
             </section>
@@ -217,21 +217,23 @@
         })();
     </script>
     <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
+        
+         const navigatorr = () => {
+             const formm = document.getElementById('contact-form') ;
+            // .addEventListener('submit', function(event) {
                 event.preventDefault();
                 // generate a five digit number for the contact_number variable
-                this.contact_number.value = Math.random() * 100000 | 0;
+                // this.contact_number.value = Math.random() * 100000 | 0;
                 // these IDs from the previous steps
-                emailjs.sendForm('simrat_jassal', 'template_jf1g355', this)
-                    .then(function() {
+                emailjs.sendForm('simrat_jassal', 'template_jf1g355', formm )
+                    .then( function() {
                         console.log('SUCCESS!');
                         window.location.href = "./success.html";
                     }, function(error) {
                         console.log('FAILED...', error);
                         window.location.href = "./failure.html";
                     });
-            });
+        
         }
     </script>
 
