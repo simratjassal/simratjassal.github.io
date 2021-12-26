@@ -50,10 +50,10 @@
 *, ::before, ::after {
   box-sizing: border-box;
 }
-
+/* 
 html {
-  scroll-behavior: smooth;
-}
+  /* scroll-behavior: smooth; 
+} */
 
 body {
   margin: var(--header-height) 0 0 0;
@@ -333,24 +333,25 @@ img {
 }
 
 .skills__html {
-  width: 95%;
+  width: 90%;
 }
 
 .skills__css {
-  width: 85%;
+  width: 80%;
 }
 
 .skills__js {
-  width: 65%;
+  width: 80%;
 }
 
 .skills__ux {
-  width: 85%;
+  width: 65%;
 }
 
 .skills__img {
   border-radius: .5rem;
 }
+
 
 /* ===== WORK =====*/
 .work__container {
@@ -364,7 +365,7 @@ img {
 }
 
 .work__img img {
-  transition: 1s;
+  transition: .2s;
 }
 
 .work__img img:hover {
